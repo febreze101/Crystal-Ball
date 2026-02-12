@@ -1,0 +1,23 @@
+# --- Python / Django ---
+*.py[cod]
+__pycache__/
+.venv/
+venv/
+ENV/
+db.sqlite3
+.env
+media/
+staticfiles/
+
+# --- Angular / Node ---
+node_modules/
+dist/
+tmp/
+out-of-memory.log
+.angular/
+
+# --- IDEs and OS ---
+.vscode/
+.idea/
+.DS_Store
+Thumbs.db
