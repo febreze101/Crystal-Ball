@@ -6,9 +6,13 @@
   },
   "newProjectRoot": "projects",
   "projects": {
-    "CB-frontend": {
+    "cb-frontend": {
       "projectType": "application",
-      "schematics": {},
+      "schematics": {
+        "@schematics/angular:component": {
+          "style": "scss"
+        }
+      },
       "root": "",
       "sourceRoot": "src",
       "prefix": "app",
@@ -18,6 +22,7 @@
           "options": {
             "browser": "src/main.ts",
             "tsConfig": "tsconfig.app.json",
+            "inlineStyleLanguage": "scss",
             "assets": [
               {
                 "glob": "**/*",
@@ -25,13 +30,8 @@
               }
             ],
             "styles": [
-              "src/styles.css"
-            ],
-            "server": "src/main.server.ts",
-            "outputMode": "server",
-            "ssr": {
-              "entry": "src/server.ts"
-            }
+              "src/styles.scss"
+            ]
           },
           "configurations": {
             "production": {
@@ -61,10 +61,10 @@
           "builder": "@angular/build:dev-server",
           "configurations": {
             "production": {
-              "buildTarget": "CB-frontend:build:production"
+              "buildTarget": "cb-frontend:build:production"
             },
             "development": {
-              "buildTarget": "CB-frontend:build:development"
+              "buildTarget": "cb-frontend:build:development"
             }
           },
           "defaultConfiguration": "development"

@@ -1,0 +1,11 @@
+<div class="message-container">
+    @for (message of messageList(); track message.message) {
+        <div class="message-div">
+            <div class="message-header">
+                <p class="user">Sample User</p>
+                <p>{{ message.timestamp.toLocaleString() }}</p>
+            </div>
+            <p>{{ message.message }}</p>
+        </div>
+    }
+</div>

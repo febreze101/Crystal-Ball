@@ -1,0 +1,21 @@
+.message-container {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+    padding: 8px;
+}
+
+.message-div {
+    display: flex;
+    flex-direction: column;
+    gap: 4px;
+}
+
+.message-header {
+    display: flex;
+    gap: 16px;
+}
+
+.user {
+    font-weight: bold;
+}
