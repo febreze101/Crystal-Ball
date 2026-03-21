@@ -13,6 +13,10 @@ export class BoardView {
   private messageService = inject(MessageService);
 
   constructor() {
-    this.messageList.set(this.messageService.GetMessages());
+    
+  }
+
+  async ngOnInit() {
+    this.messageList.set(await this.messageService.GetMessages());
   }
 }

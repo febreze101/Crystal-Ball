@@ -51,7 +51,10 @@ def handle_board_messages(request, board_id):
             .range(start, end) \
             .execute()
         
-        return Response(res.data, status=200)
+        # TODO: Replace this with actual auth logic
+        response = Response(res.data, status=200)
+        response["Access-Control-Allow-Origin"] = "*"
+        return response
 
     # --- POST LOGIC ---
     if request.method == 'POST':
